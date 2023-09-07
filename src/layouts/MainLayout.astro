@@ -1,0 +1,20 @@
+---
+import MainHead from "../layouts/MainHead.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "My Astro Site",
+  description = "My personal portfolio website",
+} = Astro.props;
+---
+
+<html lang="en">
+  <MainHead title={title} description={description} />
+  <body>
+    <slot />
+  </body>
+</html>
