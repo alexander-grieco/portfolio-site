@@ -1,14 +1,17 @@
 ---
+// library imports
 import { Icon } from "astro-icon";
-import Link from "../components/Link.astro";
+
+// component imports
+import Link from "./Link.astro";
 
 // data imports
-import navData from "../data/navData.js";
+import navData from "../data/navData";
 ---
 
 <nav aria-label="Primary">
   <div class="navbar">
-    <a href="/" aria-label="Go home" class="logomark">
+    <a href="/" class="logomark" aria-label="Go home">
       <Icon name="logomark" width="60" />
     </a>
     <ul>
@@ -17,16 +20,17 @@ import navData from "../data/navData.js";
           <Link
             text={item.name}
             href={item.path}
-            style="secondary"
+            style="primary"
             isFilled={false}
-            icon={{
-              name: "mdi:google-lens",
-              side: "left",
-            }}
+            data-navLink
           />
         ))
       }
     </ul>
   </div>
 </nav>
+
+<script>
+  import "../js/nav.js";
+</script>
 

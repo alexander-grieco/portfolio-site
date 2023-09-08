@@ -32,22 +32,21 @@ const {
     "link",
     classes,
     style,
-    {
-      filled: isFilled,
-      bordered: borderVisible,
-    },
-    { ...rest },
+    { filled: isFilled, bordered: borderVisible },
+    { ...rest }
   ]}
 >
-{
-  icon && icon.side === "left" && (
-    <Icon name={icon.name} height="24" width=24" />
-  )
-}
-<span>{text}</span>
-{
-  icon && icon.side === "right" && (
-    <Icon name={icon.name} height="24" width=24" />
-  )
-}
+  {
+    icon && icon.side === "left" && (
+      <Icon name={icon.name} height="24" width=24" />
+    )
+  }
+  
+  <span>{text}</span>
+  
+  {
+    icon && icon.side === "right" && (
+      <Icon name={icon.name} height="24" width=24" />
+    )
+  }
 </a>
