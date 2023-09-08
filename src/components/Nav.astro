@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon";
+import Link from "../components/Link.astro";
+
+// data imports
+import navData from "../data/navData.js";
+---
+
+<nav aria-label="Primary">
+  <div class="navbar">
+    <a href="/" aria-label="Go home" class="logomark">
+      <Icon name="logomark" width="60" />
+    </a>
+    <ul>
+      {
+        navData.map((item) => (
+          <Link
+            text={item.name}
+            href={item.path}
+            style="secondary"
+            isFilled={false}
+            icon={{
+              name: "mdi:google-lens",
+              side: "left",
+            }}
+          />
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
