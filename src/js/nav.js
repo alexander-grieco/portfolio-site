@@ -1,5 +1,3 @@
-console.log('in the nav');
-
 const navLinks = document.querySelectorAll("[data-navLink]");
 
 navLinks.forEach((link) => {
