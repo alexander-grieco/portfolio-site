@@ -1,0 +1,8 @@
+{
+  "title": "Alex Grieco's Astro Blog and Portfolio Site",
+  "description": "My musings about tech and life",
+  "image": {
+    "src": "/images/image-default.jpg",
+    "alt": "My Astro Blog"
+  }
+}

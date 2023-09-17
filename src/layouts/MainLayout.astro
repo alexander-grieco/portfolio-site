@@ -14,11 +14,14 @@ interface Props {
 const {
   title = "My Astro Site",
   description = "My personal portfolio website",
+  image,
+  frontmatter,
+  robots,
 } = Astro.props;
 ---
 
 <html lang="en">
-  <MainHead title={title} description={description} />
+  <MainHead {title} {description} {image} {frontmatter} {robots} />
   <body>
     <Nav />
     <main>
